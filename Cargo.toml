@@ -5,4 +5,4 @@ authors = ["Parker Knight <pknight24@protonmail.com", "Nicholas Lesbirel <nlesbi
 
 [dependencies]
 
-argparse = "*"
+clap = "2.26.2"
