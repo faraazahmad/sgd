@@ -1,8 +1,7 @@
 [package]
 name = "sgd"
 version = "0.1.0"
-authors = ["Parker Knight <pknight24@protonmail.com"]
-authors = ["Nicholas Lesbirel <nlesbirel@ufl.edu"]
+authors = ["Parker Knight <pknight24@protonmail.com", "Nicholas Lesbirel <nlesbirel@ufl.edu>"]
 
 [dependencies]
 
