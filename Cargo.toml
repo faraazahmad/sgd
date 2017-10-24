@@ -4,5 +4,20 @@ version = "0.1.0"
 authors = ["Parker Knight <pknight24@protonmail.com", "Nicholas Lesbirel <nlesbirel@ufl.edu>"]
 
 [dependencies]
-
 clap = "2.26.2"
+
+[[bin]]
+name = "s"
+path = "src/bin/s.rs"
+
+[[bin]]
+name = "g"
+path = "src/bin/g.rs"
+
+[[bin]]
+name = "d"
+path = "src/bin/d.rs"
+
+[[bin]]
+name = "install"
+path = "src/install.rs"
