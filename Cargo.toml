@@ -1,6 +1,8 @@
 [package]
 name = "sgd"
 version = "0.1.0"
-authors = ["Parker Knight <parkerknight@Parkers-MacBook-Air.local>"]
+authors = ["Parker Knight <pknight24@protonmail.com"]
 
 [dependencies]
+
+argparse = "*"
