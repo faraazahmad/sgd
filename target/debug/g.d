@@ -1,1 +1,1 @@
-/Users/parkerknight/Dropbox/programming/sgd/target/debug/g: /Users/parkerknight/Dropbox/programming/sgd/src/bin/g.rs
+/Users/parkerknight/sgd/target/debug/g: /Users/parkerknight/sgd/src/bin/g.rs
