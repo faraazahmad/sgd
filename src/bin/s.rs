@@ -3,13 +3,9 @@ extern crate file;
 
 use clap::{Arg, App};
 use std::process::Command;
+use std::env;
 
 fn main(){
-    let pwd = Command::new("pwd")
-        .output()
-        .expect("FAILED TO INSTALL");
-    let pwd = String::from_utf8_lossy(&pwd.stdout);
-    let pwd = pwd.trim().to_owned();
     let s = App::new("s")
         .version("v0.1")
         .author("Parker K")
@@ -20,14 +16,14 @@ fn main(){
             .index(1)).
         get_matches();
     let save_name = s.value_of("NAME").unwrap().to_owned();
-    //io(&save_name).expect("failed to find file");
     println!("{}", save_name);
+    let cur = env::current_dir().unwrap();
+    let cur = cur.to_str().unwrap();
 
+    let home = env::home_dir().unwrap();
+    let home = home.to_str().unwrap();
+    println!("{}", home);
+    
+    file::put(home.to_owned() + "/sgd/src/saved_locations.txt", save_name + "=" + cur);
 }
-//TODO: fix file pathing for writing to the saved locations text file
-fn io(name: &String) -> file::Result<()>{
-    let sgdloc = file::get_text("../sgd_location.txt")?;
-    let savedloc = sgdloc + "src/saved_locations.txt";
-    file::put(savedloc, name)?;
-    Ok(())
-}
+
