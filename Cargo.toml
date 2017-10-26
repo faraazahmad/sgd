@@ -5,6 +5,7 @@ authors = ["Parker Knight <pknight24@protonmail.com", "Nicholas Lesbirel <nlesbi
 
 [dependencies]
 clap = "2.26.2"
+file = "1.1.1"
 
 [[bin]]
 name = "s"
