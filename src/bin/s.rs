@@ -24,6 +24,6 @@ fn main(){
     let home = home.to_str().unwrap();
     println!("{}", home);
     
-    file::put(home.to_owned() + "/sgd/src/saved_locations.txt", save_name + "=" + cur);
+    let old = file::get_text(home.to_owned() + "/sgd/src/saved_locations.txt");
+    file::put(home.to_owned() + "/sgd/src/saved_locations.txt", old.unwrap() + &save_name + "=" + cur + "\n");
 }
-
