@@ -25,6 +25,12 @@ fn main(){
     let save_location = home +"/sgd/src/.saved/" + &save_name;
     println!("{} saved to {}", save_name, save_location);
     
+    let check = file::get_text(&save_location);
+    match check {
+        Err(_) => println!("File does not exist"),
+        Ok(_) => println!("File already exists!"),
+    
+    };
 
     
 }
