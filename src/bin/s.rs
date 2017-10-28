@@ -22,7 +22,7 @@ fn main(){
 
     let home = env::home_dir().unwrap();
     let home = home.to_str().unwrap().to_owned();
-    let save_location = home +"/sgd/src/.saved/" + &save_name;
+    let save_location = home +"/sgd/src/.saved/" + &save_name + ".sgd";
     println!("{} saved to {}", save_name, save_location);
     
     let check = file::get_text(&save_location);
