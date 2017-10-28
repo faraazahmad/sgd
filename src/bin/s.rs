@@ -3,8 +3,8 @@ extern crate clap;
 extern crate file;
 
 use clap::{Arg, App};
-use std::process::Command;
 use std::env;
+use std::fs;
 
 fn main(){
     let s = App::new("s")
@@ -28,17 +28,17 @@ fn main(){
     let check = file::get_text(&save_location);
     match check {
         Err(_) => make_file(&save_location),
-        Ok(_) => println!("File already exists!"),
+        Ok(_) => rem_file(&save_location),
     
     };
 
-   file::put(&save_location, cur); 
+   file::put(&save_location, cur).expect("Failed to write to file"); 
 }
 
-fn make_file(save_location: &str){
-    Command::new("touch")
-        .arg(save_location)
-        .output()
-        .expect("Failed to create file");
+fn make_file(sl: &str){
+    fs::File::create(sl).expect("Failed to create file");
+}
 
+fn rem_file(sl: &str){
+    fs::remove_file(sl).expect("Failed to remove old file");
 }
