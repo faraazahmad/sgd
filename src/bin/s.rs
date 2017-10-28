@@ -27,10 +27,18 @@ fn main(){
     
     let check = file::get_text(&save_location);
     match check {
-        Err(_) => println!("File does not exist"),
+        Err(_) => make_file(&save_location),
         Ok(_) => println!("File already exists!"),
     
     };
 
-    
+   file::put(&save_location, cur); 
+}
+
+fn make_file(save_location: &str){
+    Command::new("touch")
+        .arg(save_location)
+        .output()
+        .expect("Failed to create file");
+
 }
