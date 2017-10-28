@@ -1,1 +1,1 @@
-/Users/parkerknight/Dropbox/programming/sgd/target/debug/install: /Users/parkerknight/Dropbox/programming/sgd/src/install.rs
+/Users/parkerknight/sgd/target/debug/install: /Users/parkerknight/sgd/src/install.rs

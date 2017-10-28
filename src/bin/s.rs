@@ -1,3 +1,4 @@
+//saves locations and files
 extern crate clap;
 extern crate file;
 
@@ -16,14 +17,14 @@ fn main(){
             .index(1)).
         get_matches();
     let save_name = s.value_of("NAME").unwrap().to_owned();
-    println!("{}", save_name);
     let cur = env::current_dir().unwrap();
     let cur = cur.to_str().unwrap();
 
     let home = env::home_dir().unwrap();
-    let home = home.to_str().unwrap();
-    println!("{}", home);
+    let home = home.to_str().unwrap().to_owned();
+    let save_location = home +"/sgd/src/.saved/" + &save_name;
+    println!("{} saved to {}", save_name, save_location);
     
-    let old = file::get_text(home.to_owned() + "/sgd/src/saved_locations.txt");
-    file::put(home.to_owned() + "/sgd/src/saved_locations.txt", old.unwrap() + &save_name + "=" + cur + "\n");
+
+    
 }

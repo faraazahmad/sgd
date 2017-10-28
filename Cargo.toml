@@ -18,3 +18,7 @@ path = "src/bin/g.rs"
 [[bin]]
 name = "d"
 path = "src/bin/d.rs"
+
+[[bin]]
+name = "install"
+path = "src/install.rs"

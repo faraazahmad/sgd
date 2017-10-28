@@ -1,3 +1,0 @@
-test2=/Users/parkerknight/Dropbox/programming
-test=/Users/parkerknight/Dropbox/programming
-math=/Users/parkerknight/Dropbox/programming/math
