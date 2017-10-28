@@ -8,7 +8,7 @@ use std::fs;
 
 fn main(){
     let s = App::new("s")
-        .version("v0.1")
+        .version("v0.5")
         .author("Parker K")
         .about("Saves the current location")
         .arg(Arg::with_name("NAME")
