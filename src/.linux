@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo mv ./target/debug/s /usr/bin/s
