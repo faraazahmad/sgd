@@ -1,1 +1,1 @@
-/Users/parkerknight/sgd/target/debug/s: /Users/parkerknight/sgd/src/bin/s.rs
+/home/nicholas/sgd/target/debug/s: /home/nicholas/sgd/src/bin/s.rs
