@@ -37,6 +37,7 @@ fn show_error(gl: &str){
 fn go_to(gl: &str){
     let dest = file::get_text(gl).expect("Failed to read file");
     println!("{}", dest);
+    let dest = Path::new(&dest);
     match env::set_current_dir(&dest){
         Ok(_) => success(),
         Err(_) => fail(),
