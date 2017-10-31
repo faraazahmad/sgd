@@ -1,2 +1,3 @@
 #!/bin/sh
-sudo mv ./target/debug/s /usr/bin/s
+sudo mv ./target/debug/s /usr/bin/s;mv ./target/debug/g /usr/bin/g
+

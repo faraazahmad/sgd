@@ -25,6 +25,11 @@ fn darwin(){
         .arg("/usr/local/bin/s")
         .output()
         .expect("Failed to install.");
+    Command::new("mv")
+        .arg("./target/debug/g")
+        .arg("/usr/local/bin/g")
+        .output()
+        .expect("Failed to install.");
 }
 
 fn linux(){
