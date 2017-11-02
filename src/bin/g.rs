@@ -4,7 +4,6 @@ extern crate file;
 
 use clap::{Arg, App};
 use std::env;
-use std::path::Path;
 
 fn main(){
     let s = App::new("g")
@@ -37,12 +36,12 @@ fn show_error(gl: &str){
 fn go_to(gl: &str){
     let dest = file::get_text(gl).expect("Failed to read file");
     println!("{}", dest);
-    let dest = Path::new(&dest);
-    match env::set_current_dir(&dest){
-        Ok(_) => success(),
-        Err(_) => fail(),
+    //let dest = Path::new(&dest);
+    //    match env::set_current_dir(&dest){
+    //    Ok(_) => success(),
+    //    Err(_) => fail(),
 
-    };
+    //};
 }
-fn success() { }
-fn fail() { println!("Error: Invalid path") }
+//fn success() { }
+//fn fail() { println!("Error: Invalid path") }
