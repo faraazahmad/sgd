@@ -7,7 +7,7 @@ use std::env;
 
 fn main(){
     let s = App::new("g")
-        .version("v0.1")
+        .version("v0.9")
         .author("Parker K")
         .about("Goes to a specified location")
         .arg(Arg::with_name("NAME")

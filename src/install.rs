@@ -24,9 +24,9 @@ fn main(){
         "SunOS\n" => solaris(),
 	    _ => println!(""),
     };
-    //Command::new("src/.setalias")
-    //    .output()
-    //    .expect("Shit didnt work");
+    Command::new("src/.setalias")
+        .output()
+        .expect("Shit didnt work");
 }
 
 fn darwin(){
