@@ -1,1 +1,1 @@
-/home/nicholas/sgd/target/debug/install: /home/nicholas/sgd/src/install.rs
+/Users/parkerknight/sgd/target/debug/install: /Users/parkerknight/sgd/src/install.rs
