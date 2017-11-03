@@ -40,6 +40,6 @@ where (name) is the name of the shortcut. For example, if I wanted to save a sho
 
 Once a shortcut is saved, you can cd there automatically by simply running:
 
->g <(name)
+>g (name)
 
 where, again, (name) is the name of your saved shortcut. Trying to 'g' to a shortcut that doesn't exist will throw an error. 
