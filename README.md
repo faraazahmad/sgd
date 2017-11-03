@@ -19,7 +19,9 @@ First, run the following command:
 Then, run:
 
 >cargo build
+
 and then
+
 >cargo run --bin install
 
 and you should be good to go. You may have to restart your terminal for changes to take effect. You can also run:
