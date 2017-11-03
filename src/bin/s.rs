@@ -14,11 +14,19 @@ fn main(){
         .arg(Arg::with_name("NAME")
             .help("Names the alias for this saved location")
             .required(true)
-            .index(1)).
-        get_matches();
+            .index(1))
+        .arg(Arg::with_name("file")
+             .short("f")
+             .long("file")
+             .value_name("FILE")
+             .help("Indicates a specific file to be saved")
+             .takes_value(true))
+        .get_matches();
     let save_name = s.value_of("NAME").unwrap().to_owned();
+    let file_name = s.value_of("file").unwrap_or("").to_owned();
     let cur = env::current_dir().unwrap();
     let cur = cur.to_str().unwrap();
+    let cur = cur.to_owned() + "/" + &file_name;
 
     let home = env::home_dir().unwrap();
     let home = home.to_str().unwrap().to_owned();
