@@ -32,14 +32,14 @@ and you should be good to go. You may have to restart your terminal for changes 
 
 Save a shortcut to the directory that you are currently in with:
 
->s <name>
+>s (name)
 
-where <name> is the name of the shortcut. For example, if I wanted to save a shortcut to a directory called 'Documents", a good shortcut name might be:
+where (name) is the name of the shortcut. For example, if I wanted to save a shortcut to a directory called 'Documents", a good shortcut name might be:
 
 >s doc
 
 Once a shortcut is saved, you can cd there automatically by simply running:
 
->g <name>
+>g <(name)
 
-where, again, <name> is the name of your saved shortcut. Trying to 'g' to a shortcut that doesn't exist will throw an error. 
+where, again, (name) is the name of your saved shortcut. Trying to 'g' to a shortcut that doesn't exist will throw an error. 
