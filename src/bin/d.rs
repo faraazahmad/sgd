@@ -28,17 +28,21 @@ fn main(){
     let go_location = home +"/sgd/src/.saved/" + &loc_name + ".sgd";
     
     let check = file::get_text(&go_location);
+    let target;
     match check {
-        Err(_string) => show_error(&go_location),
-        Ok(_string) => go_to(&go_location),
-    
+        Err(_) => {
+            show_error(&go_location)
+        },
+        Ok(_) => {
+            target = go_to(&go_location);
+            start_com(&com_name, &target);
+        },
     };
 }
 
-fn show_error(gl: &str) -> String
+fn show_error(gl: &str)
 {
     println!("Error: no file found at {}", gl);
-    String::from("error")
 }
 
 fn go_to(gl: &str) -> String
@@ -47,6 +51,13 @@ fn go_to(gl: &str) -> String
     dest
 } 
 
+fn start_com(com: &str, arg: &str)
+{
+    std::process::Command::new(com)
+        .arg(arg)
+        .spawn()
+        .expect("Command failed");
 
+}
 
 
