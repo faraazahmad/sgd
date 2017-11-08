@@ -6,6 +6,10 @@ then
     {
         cd `gsgd "$1"` || gsgd "$1"
     }' >> ~/.bashrc
+    #echo 'function d()
+    #{
+    #    "$1" `dsgd "$2"`
+    #}' >> ~/.bashrc
 fi
 
 if [ -f ~/.zshrc ]
@@ -14,6 +18,10 @@ then
     {
         cd `gsgd "$1"` || gsgd "$1"
     }' >> ~/.zshrc
+    #echo 'function d()
+    #{
+    #    "$1" `dsgd "$2"`
+    #}' >> ~/.zshrc
 fi
 
 if [ -f ~/.bash_profile ]
@@ -22,5 +30,9 @@ then
     {
         cd `gsgd "$1"` || gsgd "$1"
     }' >> ~/.bash_profile
+    #echo 'function d()
+    #{
+    #    "$1" `dsgd "$2"`
+    #}' >> ~/.bash_profile
 fi
 
