@@ -30,6 +30,9 @@ and you should be good to go. You may have to restart your terminal for changes 
 
 (replacing \* with your shell of choice).
 
+Also, if you use oh-my-zsh, you will need to delete or comment out the 'd' hotkey for the 'd' command to work.
+Find the command here: https://github.com/robbyrussell/oh-my-zsh/wiki/Cheatsheet
+
 <h3>Usage</h3>
 (NOTE: So far only 's' and 'g' are functional. The 'd' command is still a work in progress.)
 

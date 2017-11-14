@@ -1,5 +1,5 @@
 #!/bin/sh
 sudo mv ./target/debug/s /usr/bin/s;
 sudo mv ./target/debug/g /usr/bin/gsgd;
-sudo mv ./target/debug/d /usr/bin/dsgd;
+sudo mv ./target/debug/d /usr/bin/d;
 
