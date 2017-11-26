@@ -40,6 +40,11 @@ fn darwin(){
         .arg("/usr/local/bin/gsgd")
         .output()
         .expect("Failed to install.");
+    Command::new("mv")
+        .arg("./target/debug/d")
+        .arg("/usr/local/bin/d")
+        .output()
+        .expect("Failed to install.");
 }
 
 fn linux(){
