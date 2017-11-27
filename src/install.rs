@@ -4,6 +4,8 @@ use std::env;
 
 fn main() {
     println!("Building...");
+
+    // Find the OS type by running the uname command
     let os_str = Command::new("uname")
         .arg("-s")
         .output()
@@ -12,7 +14,7 @@ fn main() {
     let os_str = String::from_utf8_lossy(&os_str.stdout)
         .into_owned();
 
-    match env::home_dir(){
+    match env::home_dir() {
         Some(home) => fs::create_dir(home
                       .display()
                       .to_string()
@@ -22,7 +24,7 @@ fn main() {
         //Some(home) => println!("{}", home.display().to_string().to_owned() +"/sgd/src/.saved"),
     };
 
-    match &os_str[..]{
+    match &os_str[..] {
         "Darwin\n" => darwin(),
 	    "Linux\n" => linux(),
         "SunOS\n" => solaris(),
@@ -58,6 +60,7 @@ fn linux() {
     Command::new("./.linux").output().expect("Failed to run .linux");
 }
 
+// Solaris is not yet supported, support to be added in later versions
 fn solaris() {
     println!("OS not yet supported");
 }
